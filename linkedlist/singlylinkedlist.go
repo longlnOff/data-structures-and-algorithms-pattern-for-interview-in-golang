@@ -96,7 +96,7 @@ func (ll *SinglyLinkedList[T]) DelByPos(pos int) (T, bool) {
 	}
 	// move to the before position and delete
 	cur := ll.Head
-	for index := 1; index < pos; index++ {
+	for index := 1; index < ll.length; index++ {
 		cur = cur.Next
 	}	
 	data := cur.Data
